@@ -8,6 +8,7 @@
   <img alt="Pandas logo" src="https://img.shields.io/badge/Pandas-efefef?style=for-the-badge&logo=pandas&logoColor=150458">
   <img alt="TenserFlow logo" src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white">
   <img alt="Keras logo" src="https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=white">
+  <img alt="PyTorch logo" src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
 </div>
 
 ## APTP2023 - AI Model to Yield High Score in Game "Breakout"
