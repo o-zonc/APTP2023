@@ -11,7 +11,7 @@
   <img alt="PyTorch logo" src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
 </div>
 
-## APTP2023 - AI Model to Yield High Score in Game "Breakout"
+## APTP2023 - An AI Model to Yield High Score in Game "Breakout"
     ...under construction
 
 ## 
