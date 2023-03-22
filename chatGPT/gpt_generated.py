@@ -13,7 +13,7 @@ paddle_width = 100
 paddle_height = 20
 paddle_x = WIDTH // 2 - paddle_width // 2
 paddle_y = HEIGHT - 50
-paddle_speed = 30
+paddle_speed = 30 # originally it was 5, but now it is 30 due to the hardness
 paddle = pygame.Rect(paddle_x, paddle_y, paddle_width, paddle_height)
 
 ball_width = 20
