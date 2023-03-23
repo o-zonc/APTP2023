@@ -11,5 +11,9 @@
   <img alt="PyTorch logo" src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white">
 </div>
 
+<div align="center">
+  <img width="587" alt="Atari Breakout OG Image" src="https://user-images.githubusercontent.com/97948617/227078869-e03dfd2d-dff2-45d4-961b-01746f8ce737.png">
+</div>
+
 ## APTP2023 - An AI Model to Yield High Score in Game "Breakout"
     ...under construction
