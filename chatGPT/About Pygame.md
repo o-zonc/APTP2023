@@ -5,7 +5,6 @@
 - [4. How can I make a pause button using pygame module?](#4-how-can-i-make-a-pause-button-using-pygame-module)
 
 # 1. How can I make a start page using pygame?
-
 To create a start page using Pygame, you can follow the steps below:
 1. Import the Pygame library and initialize it:
    ``` Python
@@ -50,7 +49,6 @@ To create a start page using Pygame, you can follow the steps below:
 The code above will display an image for the start page and add a message asking the user to press any key to start the game. Once the user presses a key, the program will exit the start page loop and return control to the main game loop.
 
 # 2. How can I make a dashboard using pygame?
-
 To create a dashboard using Pygame, you can follow the steps below:
 1. Import the Pygame library and initialize it:
    ``` Python
