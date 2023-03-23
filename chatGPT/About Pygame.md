@@ -109,9 +109,9 @@ To record scores in a "Breakout" game using the Pygame module, you can follow th
    ```
 2. Display the score on the game screen using Pygame's font module. You can choose a font, font size, and font color that suits your game. Here's an example:
    ``` python
-   font = pygame.font.Font(None, 36)
-   score_text = font.render("Score: " + str(score), True, (255, 255, 255))
-   screen.blit(score_text, (10, 10))
+   font = pygame.font.Font(None, 36) # Create a font object
+   score_text = font.render("Score: " + str(score), True, WHITE) # Render the score text
+   screen.blit(score_text, (10, 10))  # Blit the score text on the screen
    ```
    This code creates a font object with a size of 36, renders the score as a text surface, and blits (displays) it on the game screen at coordinates (10, 10).
 3. Update the score whenever a brick is destroyed by the ball. You can do this by adding a certain number of points to the score variable:
