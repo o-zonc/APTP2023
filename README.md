@@ -1,5 +1,5 @@
 <h1>
-  <img alt="header" src="https://user-images.githubusercontent.com/97948617/226820118-69fec367-3aec-40e1-912c-f6cfe4a1043b.png"/>
+  <img alt="header" src="https://user-images.githubusercontent.com/97948617/227155028-f15acf75-ea94-4acf-ac2b-fe525af0afe7.png"/>
 </h1>
 
 <div align="center">
@@ -13,7 +13,6 @@
 
 <div align="center">
   <h2>...tick...tock...tick...</h2>
-  <img width="587" alt="Atari Breakout OG Image" src="https://user-images.githubusercontent.com/97948617/227078869-e03dfd2d-dff2-45d4-961b-01746f8ce737.png">
 </div>
 
 ## APTP2023 - An AI Model to Yield High Score in Game "Breakout"
