@@ -1,5 +1,5 @@
 <h1>
-  <img alt="header" src="https://user-images.githubusercontent.com/97948617/227196609-6c8e8fe9-89b2-40b7-8bd0-9344ed760856.png"/>
+  <img alt="header" src="https://user-images.githubusercontent.com/97948617/227223460-f7073a21-3bde-4964-92f4-99815281dcfc.png"/>
 </h1>
 
 <h2 align="center">An AI Model to Yield High Score in Game "Breakout"</h2>
