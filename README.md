@@ -18,22 +18,26 @@
 # APTP 2023 - {TeamName}
 **Asterisk Programming Team Project 2023**
 
-<h4>Team Members: 이경환 | 김준원 | 박태민 | 정민서 | TA 김나윤</h4>
+#### Team Members: 이경환 | 김준원 | 박태민 | 정민서 | TA 김나윤
 
 ## 1. 주제
+
 
 ## 2. 동기
 
 ## 3. 프로그램 사용 대상
+- 
 
 ## 4. 목적
 
 ## 5. 주요 기능
-1. Image Classifier - Predict
-2. Image Classifier - Trainer
+1. Breakout Game
+2. BreakoutAI - Training
+3. BreakoutAI - v. AI
 
 ## 6. 프로젝트 핵심
-- Understanding of CNN
+- Using PyGame
+- Understanding of DQN
 
 ## 7. 구현에 필요한 라이브러리나 기술
 ### Language
