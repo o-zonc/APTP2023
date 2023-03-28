@@ -12,7 +12,7 @@
 
 ---
 
-# APTP 2023 - {진짜정녕경환이와아이들이맞는선택인강쇼}
+# APTP 2023 - {경환이와 아이들}
 **Asterisk Programming Team Project 2023**
 
 #### Team Members: 이경환 | 김준원 | 박태민 | 정민서 | TA 김나윤
