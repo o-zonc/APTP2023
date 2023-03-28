@@ -4,9 +4,20 @@ import random
 # Set up the game window
 pygame.init()
 WIDTH = 800
-HEIGHT = 600
+HEIGHT = 800 # original height 600
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout")
+
+# Set up the colors
+RED = (242, 8, 0)
+ORANGE = (253, 139, 0)
+YELLOW = (231, 226, 0)
+YELGREEN = (154, 205, 50)
+GREEN = (2, 165, 88)
+BLUE = (60, 112, 239)
+INDIGO = (94, 2, 233)
+VIOLET = (143, 0, 255)
+PINK = (255, 105, 180)
 
 # Set up the game objects
 paddle_width = 100
@@ -26,10 +37,10 @@ ball = pygame.Rect(ball_x, ball_y, ball_width, ball_height)
 
 brick_width = 80
 brick_height = 30
-brick_gap = 10
-brick_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
+brick_gap = 0 # original gap 10
+brick_colors = [RED, ORANGE, YELLOW, YELGREEN, GREEN, BLUE, INDIGO, VIOLET, PINK] # originally it was RED, GREEN, and BLUE
 bricks = []
-for row in range(3):
+for row in range(9): # originally 3 rows
     brick_color = brick_colors[row]
     for col in range(10):
         brick_x = col * (brick_width + brick_gap) + brick_gap
@@ -74,9 +85,9 @@ while not game_over:
             break
 
     # Draw the game objects
-    window.fill((255, 255, 255))
-    pygame.draw.rect(window, (0, 0, 0), paddle)
-    pygame.draw.circle(window, (0, 0, 0), (ball.x, ball.y), ball.width // 2)
+    window.fill((0, 0, 0)) # originally white background
+    pygame.draw.rect(window, (165, 165, 165), paddle) # originally black paddle
+    pygame.draw.circle(window, (255, 255, 255), (ball.x, ball.y), ball.width // 2) # originally black ball
     for brick, color in bricks:
         pygame.draw.rect(window, color, brick)
     pygame.display.update()
