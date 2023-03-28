@@ -21,10 +21,12 @@
 - 벽돌깨기 인공지능을 만들기
 
 ## 2. 동기
-- 
+- PyGame 모듈을 사용하는 방법에 대해서 알 수 있다.
+- TensorFlow, Keras를 이용한 AI Model을 만들 수 있다.
 
 ## 3. 프로그램 사용 대상
-- For anyone who wants to play "Breakout" with AI
+- "Breakout"을 AI와 함께 즐기고 싶은 누구나
+- "Breakout"을 통해 AI의 구조에 대해 배우고 싶은 누구나
 
 ## 4. 목적
 
