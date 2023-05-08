@@ -1,1 +1,3 @@
-print("Hello, world!")
+from breakout import window
+
+window.main()
