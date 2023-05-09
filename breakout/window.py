@@ -25,6 +25,10 @@ def splash():
         clock.tick(1)
 
 
+def home():
+    pass
+
+
 def main():
     # Set up the game window
     pygame.init()
