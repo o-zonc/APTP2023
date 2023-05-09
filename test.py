@@ -13,10 +13,10 @@ pygame.display.set_caption("Breakout")
 
 
 #추가
-background_sound = pygame.mixer.Sound("/Users/jeongminseo/Downloads/lofi-chill-140858.mp3")
+background_sound = pygame.mixer.Sound('./src/digital_love.mp3')
 background_sound.play(-1)
-wall_hit_sound = pygame.mixer.Sound("/Users/jeongminseo/Downloads/カーソル移動1.mp3")
-brick_hit_sound = pygame.mixer.Sound("/Users/jeongminseo/Downloads/カーソル移動12.mp3")
+wall_hit_sound = pygame.mixer.Sound('./src/wallhit.mp3')
+brick_hit_sound = pygame.mixer.Sound('./src/brickhit.mp3')
 
 
 # Set up the colors

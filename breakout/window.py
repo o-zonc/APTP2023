@@ -9,10 +9,9 @@ def splash():
     start_time = pygame.time.get_ticks()
 
     window = pygame.display.set_mode((SPLASHWIDTH, SPLASHHEIGHT))
-    
+
     while pygame.time.get_ticks() < start_time + 3000:
         pass
-        
 
 
 def main():
@@ -20,6 +19,16 @@ def main():
     pygame.init()
     window = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Breakout")
+
+    # Set up the sound
+    background_sound = pygame.mixer.Sound('./src/sound/02_digital_love.mp3')
+    background_sound.set_volume(0.5)
+    background_sound.play(-1)
+    wall_hit_sound = pygame.mixer.Sound('./src/sound/03_wallhit.mp3')
+    brick_hit_sound = pygame.mixer.Sound('./src/sound/04_brickhit.mp3')
+    paddle_hit_sound = pygame.mixer.Sound('./src/sound/05_paddlehit.mp3')
+    paddle_hit_sound.set_volume(1.5)
+    game_over_sound = pygame.mixer.Sound('./src/sound/14_game_over.wav')
 
     # Set key repeat interval
     delay = 100
@@ -68,18 +77,22 @@ def main():
         # Check for collisions with walls
         if ball.left <= 0 or ball.right >= WIDTH:
             mball.speed_x = -mball.speed_x
+            wall_hit_sound.play()
         if ball.top <= 0:
             mball.speed_y = -mball.speed_y
+            wall_hit_sound.play()
 
         # Check for collisions with paddle
         if ball.colliderect(paddle):
             mball.speed_y = -mball.speed_y
+            paddle_hit_sound.play()
 
         # Check for collisions with bricks
         for brick, color in bricks:
             if ball.colliderect(brick):
                 bricks.remove((brick, color))
                 mball.speed_y = -mball.speed_y
+                brick_hit_sound.play()
                 break
 
         # Draw the game objects
@@ -98,7 +111,9 @@ def main():
         # Set the game clock
         clock.tick(60)
 
-    msg = game_font.render("Game Over!", True, (255, 255, 0))  # 노란색
+    msg = game_font.render("Game Over!", True, (255, 255, 255))  # 노란색
+    background_sound.stop()
+    game_over_sound.play()
     msg_rect = msg.get_rect(center=(int(WIDTH / 2), int(HEIGHT / 2)))
     window.blit(msg, msg_rect)
     pygame.display.update()
