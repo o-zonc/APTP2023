@@ -3,12 +3,21 @@ import random
 import json
 import theme.colorpick
 
+
 # Set up the game window
 pygame.init()
 WIDTH = 800
 HEIGHT = 600
 window = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Breakout")
+
+
+#추가
+background_sound = pygame.mixer.Sound("/Users/jeongminseo/Downloads/lofi-chill-140858.mp3")
+background_sound.play(-1)
+wall_hit_sound = pygame.mixer.Sound("/Users/jeongminseo/Downloads/カーソル移動1.mp3")
+brick_hit_sound = pygame.mixer.Sound("/Users/jeongminseo/Downloads/カーソル移動12.mp3")
+
 
 # Set up the colors
 RED = (242, 8, 0)
@@ -78,8 +87,12 @@ while not game_over:
     # Check for collisions with walls
     if ball.left <= 0 or ball.right >= WIDTH:
         ball_speed_x = -ball_speed_x
+        #추가
+        wall_hit_sound.play()
     if ball.top <= 0:
         ball_speed_y = -ball_speed_y
+        #추가
+        wall_hit_sound.play()
 
     # Check for collisions with paddle
     if ball.colliderect(paddle):
@@ -90,6 +103,8 @@ while not game_over:
         if ball.colliderect(brick):
             bricks.remove((brick, color))
             ball_speed_y = -ball_speed_y
+            # 추가
+            brick_hit_sound.play()
             break
 
     # Draw the game objects
