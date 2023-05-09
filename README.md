@@ -52,3 +52,7 @@
 - [AI Model](chatGPT/About%20AI%20Model.md)
 
 ## 8. 분업 계획
+- 이경환
+- 김준원
+- 박태민
+- 정민서 : 소리
