@@ -14,10 +14,11 @@ def splash():
 
     splashimage = pygame.image.load('./src/image/splash.png')
     splash_sound = pygame.mixer.Sound(sfx.splash)
+    pygame.display.set_caption('Breakout')
     splash_sound.play()
 
     while pygame.time.get_ticks() < start_time + 2000:
-        window = pygame.display.set_mode((SPLASHWIDTH, SPLASHHEIGHT))
+        window = pygame.display.set_mode((WIDTH, HEIGHT))
         window.blit(splashimage, [0, 0])
         pygame.display.update()
 

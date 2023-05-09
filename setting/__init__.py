@@ -1,9 +1,6 @@
 WIDTH = 800
 HEIGHT = 600
 
-SPLASHWIDTH = 600
-SPLASHHEIGHT = 400
-
 pretendardblack = './src/font/Pretendard-Black.ttf'
 pretendardmedium = './src/font/Pretendard-Medium.ttf'
 
@@ -18,5 +15,4 @@ class sound():
         self.gameover = './src/sound/14_game_over.wav'
 
 
-__all__ = ['WIDTH', 'HEIGHT', 'SPLASHWIDTH', 'SPLASHHEIGHT',
-           'pretendardblack', 'pretendardmedium', 'sound']
+__all__ = ['WIDTH', 'HEIGHT', 'pretendardblack', 'pretendardmedium', 'sound']

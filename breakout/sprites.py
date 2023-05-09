@@ -25,7 +25,7 @@ class ball:
         self.x = random.randint(self.width, WIDTH - self.width)
         self.y = HEIGHT // 2 - self.height // 2
         self.speed_x = random.choice([-5, 5])
-        self.speed_y = 5
+        self.speed_y = -5
 
     def speedup(self, multiplier):
         if (abs(self.speed_x) < 1 or abs(self.speed_y) < 1):
