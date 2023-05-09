@@ -10,6 +10,7 @@ pretendardmedium = './src/font/Pretendard-Medium.ttf'
 
 class sound():
     def __init__(self):
+        self.splash = './src/sound/01_splash.mp3'
         self.background = './src/sound/02_digital_love.mp3'
         self.wall = './src/sound/03_wallhit.mp3'
         self.brick = './src/sound/04_brickhit.mp3'

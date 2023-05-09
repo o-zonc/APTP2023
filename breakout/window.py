@@ -3,16 +3,25 @@ import pygame
 from breakout import sprites
 from setting import *
 
+clock = pygame.time.Clock()
+
+pygame.init()
+sfx = sound()
+
 
 def splash():
-    pygame.init()
     start_time = pygame.time.get_ticks()
 
-    window = pygame.display.set_mode((SPLASHWIDTH, SPLASHHEIGHT))
-    window.fill((0, 0, 0))
+    splashimage = pygame.image.load('./src/image/splash.png')
+    splash_sound = pygame.mixer.Sound(sfx.splash)
+    splash_sound.play()
 
-    while pygame.time.get_ticks() < start_time + 3000:
+    while pygame.time.get_ticks() < start_time + 2000:
+        window = pygame.display.set_mode((SPLASHWIDTH, SPLASHHEIGHT))
+        window.blit(splashimage, [0, 0])
         pygame.display.update()
+
+        clock.tick(1)
 
 
 def main():
@@ -21,8 +30,12 @@ def main():
     window = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Breakout")
 
-    # Set up the sound
-    sfx = sound()
+    # Set key repeat interval
+    delay = 100
+    interval = 50
+    pygame.key.set_repeat(delay, interval)
+
+    # Set sound
     background_sound = pygame.mixer.Sound(sfx.background)
     background_sound.set_volume(0.5)
     background_sound.play(-1)
@@ -31,11 +44,6 @@ def main():
     paddle_hit_sound = pygame.mixer.Sound(sfx.paddle)
     paddle_hit_sound.set_volume(1.5)
     game_over_sound = pygame.mixer.Sound(sfx.gameover)
-
-    # Set key repeat interval
-    delay = 100
-    interval = 50
-    pygame.key.set_repeat(delay, interval)
 
     # Set up the game objects
     botpad = sprites.paddle()
@@ -58,7 +66,6 @@ def main():
     game_font = pygame.font.Font(pretendardblack, 40)
 
     # Set up the game loop
-    clock = pygame.time.Clock()
     game_over = False
 
     while not game_over:
@@ -71,6 +78,16 @@ def main():
                     paddle.x -= botpad.speed
                 elif event.key == pygame.K_RIGHT:
                     paddle.x += botpad.speed
+                elif event.key == pygame.K_UP:
+                    botpad.squeeze(1.25)
+                    mball.speedup(1.25)
+                    paddle = pygame.Rect(
+                        paddle.x, paddle.y, botpad.width, botpad.height)
+                elif event.key == pygame.K_DOWN:
+                    botpad.squeeze(0.8)
+                    mball.speedup(0.8)
+                    paddle = pygame.Rect(
+                        paddle.x, paddle.y, botpad.width, botpad.height)
 
         # Move the ball
         ball.x += mball.speed_x
