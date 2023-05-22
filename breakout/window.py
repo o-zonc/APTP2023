@@ -26,6 +26,7 @@ def splash():
 
 
 def home():
+    pygame.init()
     pass
 
 
@@ -83,16 +84,6 @@ def main():
                     paddle.x -= botpad.speed
                 elif event.key == pygame.K_RIGHT:
                     paddle.x += botpad.speed
-                elif event.key == pygame.K_UP:
-                    botpad.squeeze(1.25)
-                    mball.speedup(1.25)
-                    paddle = pygame.Rect(
-                        paddle.x, paddle.y, botpad.width, botpad.height)
-                elif event.key == pygame.K_DOWN:
-                    botpad.squeeze(0.8)
-                    mball.speedup(0.8)
-                    paddle = pygame.Rect(
-                        paddle.x, paddle.y, botpad.width, botpad.height)
 
         # Move the ball
         ball.x += mball.speed_x
@@ -120,9 +111,9 @@ def main():
                 break
 
         # Draw the game objects
-        window.fill((0, 0, 0))
-        pygame.draw.rect(window, (165, 165, 165), paddle)
-        pygame.draw.circle(window, (255, 255, 255), (ball.x, ball.y),
+        window.fill(chroma.BLACK)
+        pygame.draw.rect(window, chroma.GRAY, paddle)
+        pygame.draw.circle(window, chroma.WHITE, (ball.x, ball.y),
                            ball.width // 2)
         for brick, color in bricks:
             pygame.draw.rect(window, color, brick)
@@ -135,7 +126,7 @@ def main():
         # Set the game clock
         clock.tick(60)
 
-    msg = game_font.render("Game Over!", True, (255, 255, 255))
+    msg = game_font.render("Game Over!", True, chroma.WHITE)
     background_sound.stop()
     game_over_sound.play()
     msg_rect = msg.get_rect(center=(int(WIDTH / 2), int(HEIGHT / 2)))
@@ -147,3 +138,10 @@ def main():
 
     # Clean up
     pygame.quit()
+
+    # Back to home screen
+    home()
+
+def exit():
+    pygame.quit()
+    pass

@@ -1,6 +1,9 @@
 import random
+import math
 from setting import *
-import setting.chroma
+
+
+multiplier = math.pow(1.3, difficulty.level[difficulty.dfset])
 
 
 class paddle:
@@ -11,10 +14,7 @@ class paddle:
         self.y = HEIGHT - 50
         self.speed = 30
 
-    def squeeze(self, multiplier):
-        if (self.width > WIDTH / 3):
-            if (multiplier < 1):
-                return
+    def squeeze(self):
         self.width /= multiplier
 
 
@@ -28,9 +28,6 @@ class ball:
         self.speed_y = -5
 
     def speedup(self, multiplier):
-        if (abs(self.speed_x) < 1 or abs(self.speed_y) < 1):
-            if (multiplier < 1):
-                return
         self.speed_x *= multiplier
         self.speed_y *= multiplier
 
@@ -40,4 +37,4 @@ class brick:
         self.width = 75
         self.height = 20
         self.gap = 5
-        self.colors = setting.chroma.default
+        self.colors = chroma.default

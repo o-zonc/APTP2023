@@ -1,5 +1,7 @@
 import pygame
-from breakout import window
+from breakout import *
+from dqn import *
+from setting import *
 
 pygame.init()
 iconimg = pygame.image.load('./src/image/icon.png')

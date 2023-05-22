@@ -15,4 +15,5 @@ class sound():
         self.gameover = './src/sound/14_game_over.wav'
 
 
-__all__ = ['WIDTH', 'HEIGHT', 'pretendardblack', 'pretendardmedium', 'sound']
+__all__ = ['WIDTH', 'HEIGHT', 'pretendardblack', 'pretendardmedium',
+           'sound', 'chroma', 'difficulty']
