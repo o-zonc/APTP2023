@@ -27,7 +27,45 @@ def splash():
 
 def home():
     pygame.init()
-    pass
+
+    # Create Pygame window
+    window = pygame.display.set_mode((WIDTH, HEIGHT))
+    pygame.display.set_caption("Button Example")
+
+    # Define button properties
+    button_width, button_height = 200, 50
+    button_x, button_y = (WIDTH - button_width) // 2, (HEIGHT - button_height) // 2
+    button_color = chroma.GRAY
+    button_text = "Click Me"
+
+    # Create font object
+    font = pygame.font.Font(None, 36)
+
+    running = True
+
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+
+            # Check for mouse button down event
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                if button_x <= mouse_pos[0] <= button_x + button_width and \
+                        button_y <= mouse_pos[1] <= button_y + button_height:
+                    # Button is clicked
+                    running = False
+
+        # Draw the button rectangle
+        pygame.draw.rect(window, button_color, (button_x, button_y, button_width, button_height))
+        
+        # Draw the button text
+        text_surface = font.render(button_text, True, chroma.BLACK)
+        text_rect = text_surface.get_rect(center=(button_x + button_width // 2, button_y + button_height // 2))
+        window.blit(text_surface, text_rect)
+
+        pygame.display.flip()
 
 
 def main():
