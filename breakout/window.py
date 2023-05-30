@@ -179,7 +179,3 @@ def main():
 
     # Back to home screen
     home()
-
-def exit():
-    pygame.quit()
-    pass
