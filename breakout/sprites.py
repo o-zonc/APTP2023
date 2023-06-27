@@ -3,9 +3,6 @@ import math
 from setting import *
 
 
-multiplier = math.pow(1.3, difficulty.level[difficulty.dfset])
-
-
 class paddle:
     def __init__(self):
         self.width = 100
@@ -14,8 +11,11 @@ class paddle:
         self.y = HEIGHT - 50
         self.speed = 30
 
-    def squeeze(self):
+    def squeeze(self, multiplier):
         self.width /= multiplier
+
+    def speedup(self, multiplier):
+        self.speed *= multiplier
 
 
 class ball:
@@ -37,4 +37,10 @@ class brick:
         self.width = 75
         self.height = 20
         self.gap = 5
-        self.colors = chroma.default
+        self.colors = chroma.brickcolor
+
+    def monochrome(self):
+        if mode.monochrome == 0:
+            self.colors = chroma.brickcolor
+        else:
+            self.colors = chroma.brickmonochrome
